@@ -9,8 +9,6 @@ from src.calculator import add, subtract, multiply, divide
     (-1,  1,   0),    # negative
     (100, -50, 50),   # large values
 ])
-
-
 def test_add_cases(a, b, expected):
     assert add(a, b) == expected
 
@@ -30,8 +28,6 @@ def test_divide():
 def test_divide_by_zero():
     with pytest.raises(ValueError, match="Cannot divide by zero"):
         divide(10, 0)
-
-
 # pytest -v output:
 # PASSED  test_add_cases[2-3-5]
 # PASSED  test_add_cases[0-0-0]
